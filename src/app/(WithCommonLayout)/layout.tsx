@@ -8,7 +8,7 @@ const CommonLayout = ({ children }: { children: React.ReactNode }) => {
         <NavbarDemo></NavbarDemo>
       </header>
 
-      <main className=" min-h-screen w-full">{children}</main>
+      <main className="w-full">{children}</main>
       {/* ModeToggle in a fixed position */}
       <div className="fixed right-4 bottom-4">
         <ModeToggle />

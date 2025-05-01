@@ -13,7 +13,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body className="p-24">
+        <body className="p-4 md:p-24">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
