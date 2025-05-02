@@ -4,6 +4,11 @@ export const content = [
   "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 ];
 export const theme = {
-  extend: {},
+  extend: {
+    transitionProperty: {
+      sheet: "transform, opacity",
+      motion: "transform, opacity",
+    },
+  },
 };
 export const plugins = [];

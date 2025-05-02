@@ -37,7 +37,7 @@ function Navbar({ className }: { className?: string }) {
   }, []);
 
   return (
-    <div className={cn("fixed inset-x-0 top-4 z-50 mx-auto max-w-2xl", className)}>
+    <div className={cn("fixed inset-x-0 top-4 z-30 mx-auto max-w-2xl", className)}>
       {/* Mobile Menu Button */}
       <div className="absolute top-4 right-4 z-50 md:hidden">
         <Button
