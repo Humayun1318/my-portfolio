@@ -63,6 +63,7 @@ export const AnimatedSection = ({
 }) => {
   const { ref: inViewRef, inView } = useInView({ threshold: 0.2 });
   const { setActiveSection } = useActiveSection();
+
   const timerRef = useRef<number | null>(null);
   const sectionRef = useRef(null);
 

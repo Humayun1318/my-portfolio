@@ -1,36 +1,3 @@
-// "use client";
-
-// import { cn } from "@/lib/utils";
-// import { useActiveSection } from "@/context/active-section";
-// import { NAV_ITEMS } from "@/constants";
-// import { Minus } from "lucide-react";
-
-// export function DesktopNav() {
-//   const { activeSection } = useActiveSection();
-
-//   return (
-//     <nav className="space-y-4">
-//       {NAV_ITEMS.map((item) => (
-//         <a
-//           key={item.id}
-//           href={`#${item.id}`}
-//           className={cn(
-//             "block text-lg transition-colors",
-//             activeSection === item.id
-//               ? "text-foreground font-medium"
-//               : "text-muted-foreground hover:text-foreground"
-//           )}
-//         >
-//           <div>
-//             <Minus className="mr-2 inline h-4 w-4" />
-//             {<span>{item.label}</span>}
-//           </div>
-//         </a>
-//       ))}
-//     </nav>
-//   );
-// }
-
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -60,7 +27,7 @@ export function DesktopNav() {
 
   return (
     <motion.nav
-      className="space-y-4"
+      className="relative space-y-4" // Added relative positioning here
       initial="hidden"
       animate="visible"
       variants={containerVariants}

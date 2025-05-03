@@ -79,7 +79,9 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 export function MobileNav() {
   const [open, setOpen] = useState(false);
   const { activeSection } = useActiveSection();
-
+  if (!activeSection) {
+    throw new Error("activeSection is not defined");
+  }
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

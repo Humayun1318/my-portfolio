@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 // import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "../ui/animated-modal";
 
 import { motion } from "motion/react";
@@ -12,49 +12,56 @@ import {
 } from "@/components/ui/animated-modal";
 import { Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import PortalModal from "@/components/PortalModal";
 
 export function AnimatedModalDemo() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="">
       <Modal>
         <ModalTrigger className="group/modal-btn flex cursor-pointer justify-center bg-blue-500 text-white dark:bg-white dark:text-black">
-          <span className="text-center transition duration-500 group-hover/modal-btn:translate-x-40">
+          <span
+            className="text-center transition duration-500 group-hover/modal-btn:translate-x-40"
+            onClick={() => setOpen(true)}
+          >
             Resume Peek
           </span>
           <div className="absolute inset-0 z-20 flex -translate-x-40 items-center justify-center text-white transition duration-500 group-hover/modal-btn:translate-x-0">
             <FileText></FileText>
           </div>
         </ModalTrigger>
-        <ModalBody className="">
-          <ModalContent className="flex flex-col p-0">
-            <div className="mb-6 flex items-center justify-between">
-              <h4 className="text-lg font-bold text-neutral-600 md:text-2xl dark:text-neutral-100">
-                Humayun Kabir: Career Details
-              </h4>
-              <a
-                href="https://drive.google.com/u/0/uc?id=18QIxm4-HBNO2sFg8v6C17-lK59GcWktX&export=download"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex cursor-pointer items-center gap-2"
+        <PortalModal isOpen={open} onClose={() => setOpen(false)}>
+          <ModalBody className="">
+            <ModalContent className="flex flex-col p-0">
+              <div className="mb-6 flex items-center justify-between">
+                <h4 className="text-lg font-bold text-neutral-600 md:text-2xl dark:text-neutral-100">
+                  Humayun Kabir: Career Details
+                </h4>
+                <a
+                  href="https://drive.google.com/u/0/uc?id=18QIxm4-HBNO2sFg8v6C17-lK59GcWktX&export=download"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Download className="h-4 w-4" />
-                  Download
-                </Button>
-              </a>
-            </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex cursor-pointer items-center gap-2"
+                  >
+                    <Download className="h-4 w-4" />
+                    Download
+                  </Button>
+                </a>
+              </div>
 
-            <iframe
-              src="https://drive.google.com/file/d/18QIxm4-HBNO2sFg8v6C17-lK59GcWktX/preview"
-              className="w-full flex-1 rounded border"
-              title="CV Preview"
-              allow="autoplay"
-            />
-          </ModalContent>
-          {/* <ModalFooter className="gap-4">
+              <iframe
+                src="https://drive.google.com/file/d/18QIxm4-HBNO2sFg8v6C17-lK59GcWktX/preview"
+                className="w-full flex-1 rounded border"
+                title="CV Preview"
+                allow="autoplay"
+              />
+            </ModalContent>
+            {/* <ModalFooter className="gap-4">
             <button className="w-28 rounded-md border border-gray-300 bg-gray-200 px-2 py-1 text-sm text-black dark:border-black dark:bg-black dark:text-white">
               Cancel
             </button>
@@ -62,7 +69,8 @@ export function AnimatedModalDemo() {
               Book Now
             </button>
           </ModalFooter> */}
-        </ModalBody>
+          </ModalBody>
+        </PortalModal>
       </Modal>
     </div>
   );
