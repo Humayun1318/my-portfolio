@@ -42,7 +42,7 @@ const HomePage = () => {
       </AnimatedSection>
 
       <AnimatedSection id="projects" delay={0.4}>
-        <h2 className="mb-6 text-3xl font-bold">Selected Works</h2>
+        <h2 className="mb-6 text-3xl font-bold">See My Works</h2>
         {/* Content */}
         <ProjectsSection />
       </AnimatedSection>

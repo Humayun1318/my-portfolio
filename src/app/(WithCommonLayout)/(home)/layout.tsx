@@ -18,6 +18,7 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
                   src={HK}
                   width={200}
                   height={200}
+                  priority
                   className="rounded-full"
                   alt="Humayun Kabir"
                 />
@@ -49,6 +50,7 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
                   src={HK}
                   width={200}
                   height={200}
+                  priority
                   className="rounded-full md:w-[30%]"
                   alt="Humayun Kabir"
                 />

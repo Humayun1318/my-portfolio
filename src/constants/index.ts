@@ -10,8 +10,8 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const SOCIAL_LINKS = [
-  { id: "github", url: "#", icon: FaGithub },
-  { id: "linkedin", url: "#", icon: FaLinkedin },
-  { id: "twitter", url: "#", icon: FaTwitter },
-  { id: "email", url: "#", icon: Mail },
+  { id: "github", url: "https://github.com/Humayun1318", icon: FaGithub },
+  { id: "linkedin", url: "https://www.linkedin.com/in/humayun-kabir-b14a65160", icon: FaLinkedin },
+  { id: "twitter", url: "https://x.com/c5070f901d2345b", icon: FaTwitter },
+  { id: "email", url: "mailto:humayunkabir6267@gmail.com", icon: Mail },
 ];

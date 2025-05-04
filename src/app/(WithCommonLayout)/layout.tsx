@@ -1,6 +1,7 @@
 import { ModeToggle } from "@/components/modeToggle/ModeToggle";
 import { ScrollUnlocker } from "@/components/modeToggle/ToggleButtonIssue";
-import NavbarDemo from "@/components/navbar/navbar-menu-demo";
+import Navbar from "@/components/navbar/navbar-menu-demo";
+
 
 const CommonLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -13,9 +14,9 @@ const CommonLayout = ({ children }: { children: React.ReactNode }) => {
       </div>
 
       {/* navigation for projects */}
-      {/* <header className="">
-        <NavbarDemo></NavbarDemo>
-      </header> */}
+      <header className="relative ">
+        <Navbar className="top-2" />
+      </header>
     </>
   );
 };
