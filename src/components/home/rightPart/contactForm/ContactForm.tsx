@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 export function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
   };
   return (
     <div className="mx-auto w-full max-w-11/12 rounded-none bg-[#040d331c] p-4 md:rounded-2xl md:p-8 dark:bg-black">

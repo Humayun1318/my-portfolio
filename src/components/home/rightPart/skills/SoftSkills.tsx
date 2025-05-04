@@ -8,7 +8,7 @@ export default function SoftSkills() {
     <motion.div
       initial={{ opacity: 0, x: 20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      className="bg-card rounded-2xl  p-4 shadow-md"
+      className="bg-card rounded-2xl p-4 shadow-md"
     >
       <div className="mb-6 flex items-center gap-4">
         <Users className="text-primary h-8 w-8" />

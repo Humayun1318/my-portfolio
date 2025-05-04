@@ -44,7 +44,7 @@ export default function Footer() {
         {/* CTA Button */}
         <div>
           <Link href="/#contact">
-            <Button className="rounded-full px-6 py-2 text-sm font-medium transition hover:bg-gray-200 ">
+            <Button className="rounded-full px-6 py-2 text-sm font-medium transition hover:bg-gray-200">
               Talk with me
             </Button>
           </Link>

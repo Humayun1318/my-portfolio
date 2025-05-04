@@ -9,7 +9,7 @@ export default function Services() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      className="bg-card h-fit rounded-2xl  p-4 shadow-md"
+      className="bg-card h-fit rounded-2xl p-4 shadow-md"
     >
       <div className="mb-6 flex items-center gap-4">
         <Rocket className="text-primary h-8 w-8" />
