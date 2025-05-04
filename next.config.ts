@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
         hostname: "**",
       },
     ],
+    domains: [
+      "cdn.jsdelivr.net",
+      "raw.githubusercontent.com",
+      "daisyui.com",
+      "www.mongoosejs.net",
+      "images.unsplash.com",
+    ],
   },
 };
 

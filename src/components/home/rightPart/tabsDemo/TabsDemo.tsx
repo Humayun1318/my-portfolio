@@ -16,7 +16,6 @@ export function TabsDemo() {
             placeat quos! Labore, fuga ex maxime id ad molestias repellat sapiente! Magni quos, ad
             fuga enim, ipsa tenetur, veniam distinctio illum molestiae optio repellendus at
             perferendis repellat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-            
           </div>
         </div>
       ),

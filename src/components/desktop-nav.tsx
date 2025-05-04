@@ -32,8 +32,8 @@ export function DesktopNav() {
       animate="visible"
       variants={containerVariants}
     >
-      {NAV_ITEMS.map((item, index) => (
-        <motion.div key={item.id} variants={itemVariants} className="relative overflow-hidden">
+      {NAV_ITEMS.map((item) => (
+        <motion.div key={item.id} variants={itemVariants} className="relative">
           <a
             href={`#${item.id}`}
             className={cn(

@@ -1,13 +1,4 @@
 import { NavItem } from "@/types";
-
-// export const NAV_ITEMS: NavItem[] = [
-//   { id: "about", label: "About" },
-//   { id: "experience", label: "Experience" },
-//   { id: "projects", label: "Projects" },
-//   { id: "contact", label: "Contact" },
-// ];
-
-// // constants/index.ts
 import { Mail } from "lucide-react";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 

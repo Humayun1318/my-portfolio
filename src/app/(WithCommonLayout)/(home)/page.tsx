@@ -1,16 +1,16 @@
-import Image from "next/image";
-
-import { AnimatedModalDemo } from "@/components/home/leftPart/cvViewerModal/CvViewerModal";
-import SocialMediaLink from "@/components/home/leftPart/socialMediaLink/SocialMediaLink";
-import { TabsDemo } from "@/components/home/rightPart/tabsDemo/TabsDemo";
 import { AnimatedSection } from "@/components/animated-section";
 import { ContactForm } from "@/components/home/rightPart/contactForm/ContactForm";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { education } from "@/lib/data";
+import Experience from "@/components/home/rightPart/Experience";
+import SkillsSection from "@/components/home/rightPart/SkillsSection";
+import ProjectsSection from "@/components/home/rightPart/ProjectsSection";
 
 const HomePage = () => {
   return (
     <>
       <AnimatedSection id="about" delay={0.2}>
-        <h2 className="mb-6 text-4xl font-bold">About</h2>
+        <h2 className="mb-2 text-4xl font-bold">About</h2>
         {/* Content */}
         <p>
           I’m a passionate developer specializing in building responsive, high-performance web
@@ -28,16 +28,23 @@ const HomePage = () => {
           successfully driving community initiatives. Outside of coding, I volunteer with the Atiyar
           Para Young Star Club and stay updated on tech trends.
         </p>
+        <div className="mx-auto max-w-5xl md:px-8">
+          <HoverEffect items={education} />
+        </div>
+        <div>
+          <SkillsSection />
+        </div>
       </AnimatedSection>
 
       <AnimatedSection id="experience" delay={0.3}>
-        <h2 className="mb-6 text-4xl font-bold">Experience</h2>
-        {/* Content */}
+        <h2 className="mb-6 text-3xl font-bold">Experience</h2>
+        <Experience />
       </AnimatedSection>
 
       <AnimatedSection id="projects" delay={0.4}>
-        <h2 className="mb-6 text-4xl font-bold">Projects</h2>
+        <h2 className="mb-6 text-3xl font-bold">Selected Works</h2>
         {/* Content */}
+        <ProjectsSection />
       </AnimatedSection>
 
       <AnimatedSection id="contact" delay={0.5}>
@@ -46,10 +53,6 @@ const HomePage = () => {
         <ContactForm></ContactForm>
       </AnimatedSection>
     </>
-
-    // <div className="p-4">
-    //   <TabsDemo></TabsDemo>
-    // </div>
   );
 };
 

@@ -72,7 +72,7 @@ import Link from "next/link";
 import { DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { NAV_ITEMS } from "@/constants";
 import SocialMediaLink from "./home/leftPart/socialMediaLink/SocialMediaLink";
-import { AnimatedModalDemo } from "./home/leftPart/cvViewerModal/CvViewerModal";
+import { CvViewerModal } from "./home/leftPart/cvViewerModal/CvViewerModal";
 import { motion } from "framer-motion";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
@@ -130,7 +130,8 @@ export function MobileNav() {
           </motion.div>
 
           <motion.div variants={itemVariants} className="overflow-hidden">
-            <AnimatedModalDemo />
+            {/* <AnimatedModalDemo /> */}
+            <CvViewerModal />
           </motion.div>
 
           <motion.nav className="space-y-4" variants={containerVariants}>

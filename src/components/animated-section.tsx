@@ -100,7 +100,7 @@ export const AnimatedSection = ({
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
         transition={{ type: "spring", stiffness: 100, damping: 20, delay }}
       >
-        <Card className="p-8 shadow-md transition-shadow hover:shadow-lg">{children}</Card>
+        <section className="p-4">{children}</section>
       </motion.div>
     </motion.section>
   );
