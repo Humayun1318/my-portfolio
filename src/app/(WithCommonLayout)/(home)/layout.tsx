@@ -41,7 +41,7 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </header>
           {/* Desktop Navigation */}
-          <aside className="bg-muted/40 fixed top-0 left-0 hidden h-screen w-[40vw] p-8 md:block">
+          <aside className="fixed hidden h-screen w-[40%] p-8 md:block">
             <div className="flex h-full flex-col gap-8 space-y-4">
               {/* <BackgroundLines className=""> */}
               <div className="flex h-[50%] flex-col justify-between">
@@ -74,7 +74,7 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
           </aside>
           {/* Main Content */}
           {/* <BackgroundBeamsWithCollision> */}
-          <main className="w-full md:ml-[40vw] md:w-[60vw]">
+          <main className="w-full md:ml-[40%] md:w-[60%]">
             <div className="space-y-8 py-2 md:py-6">{children}</div>
           </main>
           {/* </BackgroundBeamsWithCollision> */}

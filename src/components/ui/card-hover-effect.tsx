@@ -64,7 +64,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "relative z-20 h-full w-full rounded-2xl border border-transparent bg-black group-hover:border-slate-700 md:p-4 dark:border-white/[0.2]",
+        "relative z-20 h-full w-full rounded-2xl border border-transparent bg-[#040d33] group-hover:border-slate-700 md:p-4 dark:border-white/[0.2]",
         className
       )}
     >

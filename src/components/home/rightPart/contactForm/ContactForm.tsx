@@ -11,7 +11,7 @@ export function ContactForm() {
     console.log("Form submitted");
   };
   return (
-    <div className="mx-auto w-full max-w-11/12 rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
+    <div className="mx-auto w-full max-w-11/12 rounded-none bg-[#040d331c] p-4 md:rounded-2xl md:p-8 dark:bg-black">
       <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">Contact Me</h2>
       <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
         Please fill out the form below to get in touch with me.

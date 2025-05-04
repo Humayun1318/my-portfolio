@@ -8,7 +8,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 export default function TechnicalSkills() {
   return (
-    <div className="bg-card rounded-2xl  p-4 shadow-md">
+    <div className="bg-card rounded-2xl p-4 shadow-md">
       <div className="mb-8 flex items-center gap-4">
         <Code className="text-primary h-8 w-8" />
         <h3 className="text-2xl font-bold">Technical Proficiencies</h3>

@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body className={`bg-background min-h-screen antialiased`}>
+      <body className={`bg-background mx-auto min-h-screen w-[95%] max-w-[1440px] antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
