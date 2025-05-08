@@ -4,7 +4,7 @@ import SocialMediaLink from "@/components/home/leftPart/socialMediaLink/SocialMe
 import { MobileNav } from "@/components/mobile-nav";
 import { ActiveSectionProvider } from "@/context/active-section";
 import Image from "next/image";
-import HK from "../../../assets/hk-removebg-preview.png";
+import profile from "../../../assets/profile.png";
 
 const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -15,12 +15,13 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex h-full flex-col gap-8 space-y-4">
               <div className="flex h-[50%] flex-col items-center justify-between px-4">
                 <Image
-                  src={HK}
+                  src={profile}
                   width={200}
                   height={200}
                   priority
-                  className="rounded-full"
+                  className="rounded-full object-cover"
                   alt="Humayun Kabir"
+                  style={{ background: 'transparent' }}
                 />
                 <h1 className="mt-4 text-lg font-bold"> I&apos;m Humayun Kabir</h1>
                 <p className="text-md mt-2">Front End Engineer</p>
@@ -47,12 +48,13 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
               {/* <BackgroundLines className=""> */}
               <div className="flex h-[50%] flex-col justify-between">
                 <Image
-                  src={HK}
+                  src={profile}
                   width={200}
                   height={200}
                   priority
-                  className="rounded-full md:w-[30%]"
+                  className="rounded-full  object-cover"
                   alt="Humayun Kabir"
+                  style={{ background: 'transparent' }}
                 />
                 <h1 className="mt-4 text-3xl font-bold"> I&apos;m Humayun Kabir</h1>
                 <p className="mt-2 text-lg">Front End Engineer</p>
