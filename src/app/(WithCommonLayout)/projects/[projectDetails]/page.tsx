@@ -87,7 +87,7 @@ export default function ProjectPage() {
         </div>
       </div>
       {/* Footer */}
-      <div className="from-primary/5 relative mt-24 bg-gradient-to-br to-blue-500/0 py-32">
+      <div className="from-primary/5 relative mt-24 bg-gradient-to-br to-blue-500/0 pt-32 pb-12">
         <Footer />
       </div>
     </main>

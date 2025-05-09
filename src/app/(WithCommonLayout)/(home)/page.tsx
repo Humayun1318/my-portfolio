@@ -5,11 +5,12 @@ import { education } from "@/lib/data";
 import Experience from "@/components/home/rightPart/Experience";
 import SkillsSection from "@/components/home/rightPart/SkillsSection";
 import ProjectsSection from "@/components/home/rightPart/ProjectsSection";
+import TechStackSection from "@/components/home/rightPart/HomePageFooter/TechStackSection";
 
 const HomePage = () => {
   return (
     <>
-      <AnimatedSection id="about" delay={0.2}>
+      <AnimatedSection id="about" delay={0.2} className="">
         <h2 className="mb-2 text-4xl font-bold">About</h2>
         {/* Content */}
         <p>
@@ -52,6 +53,7 @@ const HomePage = () => {
         {/* Content */}
         <ContactForm></ContactForm>
       </AnimatedSection>
+      <TechStackSection></TechStackSection>
     </>
   );
 };

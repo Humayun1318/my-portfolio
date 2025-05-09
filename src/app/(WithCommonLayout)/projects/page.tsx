@@ -1,9 +1,12 @@
-"use client";
-
 import ProjectCard from "@/components/projects/ProjectCard";
 import { projects } from "@/lib/data/projects";
 import ProjectsBanner from "@/components/projects/ProjectsBanner";
 import Footer from "@/components/footer/Footer";
+
+export const metadata = {
+  title: "Projects",
+  description: "Learn more about Humayun Kabir",
+};
 
 export default function ProjectsPage() {
   return (
@@ -23,7 +26,7 @@ export default function ProjectsPage() {
           ))}
         </div>
       </div>
-      <div className="from-primary/5 relative mt-24 bg-gradient-to-br to-blue-500/0 py-32">
+      <div className="from-primary/5 relative mt-24 bg-gradient-to-br to-blue-500/0 pt-32 pb-12">
         <Footer />
       </div>
     </main>

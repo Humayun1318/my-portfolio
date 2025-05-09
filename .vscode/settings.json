@@ -3,10 +3,7 @@
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.insertFinalNewline": true,
-  "editor.codeActionsOnSave": [
-    "source.fixAll",
-    "source.fixAll.eslint"
-  ],
+  "editor.codeActionsOnSave": ["source.fixAll", "source.fixAll.eslint"],
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   }

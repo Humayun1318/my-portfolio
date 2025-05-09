@@ -17,7 +17,7 @@ export const AnimatedSection = ({
   className?: string;
   delay?: number;
 }) => {
-  const { ref: inViewRef, inView } = useInView({ threshold: 0.2 });
+  const { ref: inViewRef, inView } = useInView({ threshold: 0.1 });
   const { setActiveSection } = useActiveSection();
 
   const timerRef = useRef<number | null>(null);
@@ -48,7 +48,7 @@ export const AnimatedSection = ({
       id={id}
       ref={sectionRef}
       style={{ y }}
-      className={cn("min-h-[80vh] py-12", className)}
+      className={cn("min-h-[50vh] py-12", className)}
     >
       <motion.div
         ref={inViewRef}

@@ -5,12 +5,15 @@ import { MobileNav } from "@/components/mobile-nav";
 import { ActiveSectionProvider } from "@/context/active-section";
 import Image from "next/image";
 import profile from "../../../assets/profile.png";
+import { HashTitleHandler } from "@/components/hash-title-handler";
 
 const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <ActiveSectionProvider>
+        <HashTitleHandler />
         <div className="relative">
+          {/* mobile nav */}
           <header className="md:hidden">
             <div className="flex h-full flex-col gap-8 space-y-4">
               <div className="flex h-[50%] flex-col items-center justify-between px-4">
@@ -19,9 +22,9 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
                   width={200}
                   height={200}
                   priority
-                  className="rounded-full object-cover"
+                  className="mt-4 rounded-full object-cover md:mt-auto"
                   alt="Humayun Kabir"
-                  style={{ background: 'transparent' }}
+                  style={{ background: "transparent" }}
                 />
                 <h1 className="mt-4 text-lg font-bold"> I&apos;m Humayun Kabir</h1>
                 <p className="text-md mt-2">Front End Engineer</p>
@@ -52,9 +55,9 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
                   width={200}
                   height={200}
                   priority
-                  className="rounded-full  object-cover"
+                  className="w-[30%] rounded-full object-cover"
                   alt="Humayun Kabir"
-                  style={{ background: 'transparent' }}
+                  style={{ background: "transparent" }}
                 />
                 <h1 className="mt-4 text-3xl font-bold"> I&apos;m Humayun Kabir</h1>
                 <p className="mt-2 text-lg">Front End Engineer</p>

@@ -7,24 +7,23 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "react-toastify";
 
 export function ContactForm() {
-  const [error, setError] = useState<string>('')
+  const [error, setError] = useState<string>("");
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
 
     const form = e.currentTarget;
     const name = (form.querySelector("#firstname") as HTMLInputElement).value;
     const email = (form.querySelector("#email") as HTMLInputElement).value;
     const message = (form.querySelector("#message") as HTMLTextAreaElement).value;
-    console.log("submitting ", { name, email, message });
+
     if (!name) {
-      return setError("Name")
+      return setError("Name");
     } else if (!email) {
       return setError("Mail");
     } else if (!message) {
-      return setError('Message');
+      return setError("Message");
     }
-    console.log("atai submi hosse")
+
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -33,15 +32,13 @@ export function ContactForm() {
 
     const data = await res.json();
     if (data.success) {
-      toast.success("Message sent successfully!",{
+      toast.success("Message sent successfully!", {
         position: "top-center",
-      })
+      });
       form.reset();
-      setError('')
+      setError("");
     } else {
-      toast.warn("Error sending message!",
-        { position: "top-center", }
-      )
+      toast.warn("Error sending message!", { position: "top-center" });
     }
   };
 
@@ -56,7 +53,7 @@ export function ContactForm() {
         <LabelInputContainer>
           <Label htmlFor="firstname">Your name:</Label>
           <Input id="firstname" placeholder="Tyler" type="text" />
-          {error === "Name" && <p className="text-red-500 text-sm">Name is required</p>}
+          {error === "Name" && <p className="text-sm text-red-500">Name is required</p>}
         </LabelInputContainer>
 
         <LabelInputContainer>
@@ -67,13 +64,12 @@ export function ContactForm() {
             rows={4}
             className="font-medium" // Add custom classes
           />
-          {error === "Message" && <p className="text-red-500 text-sm">Message is required</p>}
-
+          {error === "Message" && <p className="text-sm text-red-500">Message is required</p>}
         </LabelInputContainer>
         <LabelInputContainer className="mt-4 mb-4">
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-          {error === "Mail" && <p className="text-red-500 text-sm">Email is required</p>}
+          {error === "Mail" && <p className="text-sm text-red-500">Email is required</p>}
         </LabelInputContainer>
 
         <button

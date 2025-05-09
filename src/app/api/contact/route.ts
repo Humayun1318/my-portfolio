@@ -1,15 +1,16 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   const { name, email, message } = await req.json();
 
   if (!name || !email || !message) {
-    return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
+    return NextResponse.json({ error: "Missing fields" }, { status: 400 });
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
       user: process.env.NEXT_PUBLIC_EMAIL_USER,
       pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
@@ -29,8 +30,8 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error('Email error:', error);
-    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+  } catch (error: any) {
+    console.log("Fail to send:", error);
+    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
   }
 }

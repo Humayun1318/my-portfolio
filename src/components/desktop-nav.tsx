@@ -5,6 +5,7 @@ import { useActiveSection } from "@/context/active-section";
 import { NAV_ITEMS } from "@/constants";
 import { Minus } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,7 +35,7 @@ export function DesktopNav() {
     >
       {NAV_ITEMS.map((item) => (
         <motion.div key={item.id} variants={itemVariants} className="relative">
-          <a
+          <Link
             href={`#${item.id}`}
             className={cn(
               "group flex items-center text-lg transition-colors hover:pl-2",
@@ -59,7 +60,7 @@ export function DesktopNav() {
                 />
               )}
             </motion.div>
-          </a>
+          </Link>
         </motion.div>
       ))}
     </motion.nav>

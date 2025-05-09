@@ -9,6 +9,9 @@ export const theme = {
       sheet: "transform, opacity",
       motion: "transform, opacity",
     },
+    fontFamily: {
+      inter: ["var(--font-inter)"],
+    },
   },
 };
 export const plugins = [];
