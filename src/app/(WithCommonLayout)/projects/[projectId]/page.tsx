@@ -1,34 +1,51 @@
-import { notFound } from "next/navigation";
-import { Metadata } from "next";
-import { getProductById } from "@/utils";
+"use client";
+import { notFound, useParams } from "next/navigation";
 import ProjectPageClient from "@/components/ProjectPageClient";
+import { projects } from "@/lib/data/projects";
+import { useEffect } from "react";
 
-type Props = {
-  params: {
-    projectId: string;
-  };
-};
+export default function ProjectPage() {
+  const params = useParams();
+  const { projectId } = params;
+  const project = projects.find((p) => Number(p.id) === Number(projectId));
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { projectId } = await params;
-  const product = await getProductById(projectId);
+  // ===== Fetch & Update Metadata Dynamically =====
+  useEffect(() => {
+    async function updateMetadata() {
+      try {
+        // Fetch metadata from API
+        const res = await fetch(`/api/project-metadata?id=${projectId}`);
+        const metadata = await res.json();
 
-  if (!product) {
-    return {
-      title: "Project Not Found",
-      description: "Project not available.",
-    };
-  }
+        // If error (e.g., project not found), keep default title
+        if (metadata.error) return;
 
-  return {
-    title: product.title,
-    description: product.description,
-  };
-}
+        // Update <title> tag
+        if (metadata.title) {
+          document.title = metadata.title;
+        }
 
-export default async function ProjectPage({ params }: Props) {
-  const { projectId } = await params;
-  const project = await getProductById(projectId);
+        // Update <meta name="description"> tag
+        const descriptionTag = document.querySelector('meta[name="description"]');
+        if (descriptionTag && metadata.description) {
+          descriptionTag.setAttribute("content", metadata.description);
+        }
+
+        // // Update OpenGraph tags (for social sharing)
+        // if (metadata.openGraph?.images?.[0]) {
+        //   const ogImageTag = document.querySelector('meta[property="og:image"]');
+        //   if (ogImageTag) {
+        //     ogImageTag.setAttribute("content", metadata.openGraph.images[0]);
+        //   }
+        // }
+      } catch (error) {
+        console.error("Failed to update metadata:", error);
+      }
+    }
+
+    updateMetadata();
+  }, [projectId]);
+
   if (!project) return notFound();
 
   return <ProjectPageClient project={project} />;
