@@ -7,11 +7,12 @@ import Image from "next/image";
 import profile from "../../../assets/profile.png";
 import { HashTitleHandler } from "@/components/hash-title-handler";
 import { Suspense } from "react";
+import RootLoading from "@/components/RootLoading";
 
 const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<RootLoading />}>
         <ActiveSectionProvider>
           <HashTitleHandler />
           <div className="relative">
