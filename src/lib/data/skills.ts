@@ -1,5 +1,6 @@
 import { Service, SoftSkill } from "@/types";
 import { Code, Rocket, Users, BrainCircuit, Server, LayoutTemplate } from "lucide-react";
+import mongoose from "../../../public/mongoose.svg";
 
 export const LOGOS = {
   javascript:
@@ -10,17 +11,22 @@ export const LOGOS = {
   redux: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
   html: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
   css: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-  tailwind:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain.svg",
+  tailwind: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
   nextjs: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
   nodejs: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
   express: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
   mongodb: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-  mongoose: "https://www.mongoosejs.net/docs/images/mongoose_white.svg",
+  mongoose: mongoose,
   git: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
   github: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
-  daisyui: "https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg",
+  daisyui:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
   shadcn: "https://raw.githubusercontent.com/shadcn/ui/main/apps/www/public/og.jpg",
+  bootstrap:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+  sass: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
+  graphql: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
+  docker: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
 };
 
 export const technicalSkills = [
@@ -45,6 +51,13 @@ export const technicalSkills = [
       {
         name: "Tailwind CSS",
         icon: LOGOS.tailwind,
+        proficiency: "Expert",
+        level: 95,
+        color: "bg-green-700",
+      },
+      {
+        name: "Bootstrap",
+        icon: LOGOS.bootstrap,
         proficiency: "Expert",
         level: 95,
         color: "bg-green-700",

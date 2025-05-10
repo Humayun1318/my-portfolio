@@ -1,42 +1,35 @@
 "use client";
-import { notFound, useParams } from "next/navigation";
+
 import { Button } from "@/components/ui/button";
 import ImageGallery from "@/components/projects/ImageGallery";
 import TechStack from "@/components/projects/TechStack";
 import Link from "next/link";
-import { projects } from "@/lib/data/projects";
-import SingleProjectBanner from "@/components/projects/SingleProjectBanner";
 import Footer from "@/components/footer/Footer";
+import SingleProjectBanner from "@/components/projects/SingleProjectBanner";
+import { IProject } from "@/types";
 
-export default function ProjectPage() {
-  const params = useParams();
-  const { projectDetails } = params;
-  const project = projects.find((p) => Number(p.id) === Number(projectDetails));
+type Props = {
+  project: IProject;
+};
 
-  if (!project) return notFound();
-
+export default function ProjectPageClient({ project }: Props) {
   return (
-    <main className="">
+    <main>
       <SingleProjectBanner project={project} />
       <div className="mx-auto mt-4 w-11/12 max-w-4xl">
-        {/* Back Button */}
         <Button variant="ghost" asChild className="mb-8">
           <Link href="/projects">← All Projects</Link>
         </Button>
 
-        {/* Project Header */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>
           <p className="text-muted-foreground mt-4 text-lg">{project.description}</p>
         </div>
 
-        {/* Main Content */}
         <div className="grid gap-12 lg:grid-cols-3">
           <div className="space-y-12 lg:col-span-2">
-            {/* Image Gallery */}
             <ImageGallery images={[project.image]} />
 
-            {/* Project Content */}
             <div className="prose prose-invert max-w-none">
               <h2 className="text-2xl font-semibold">Project Overview</h2>
               <p className="mt-4">{project.content}</p>
@@ -53,12 +46,8 @@ export default function ProjectPage() {
             </div>
           </div>
 
-          {/* Sidebar */}
           <div className="space-y-8">
-            {/* Tech Stack */}
             <TechStack items={project.techStack} />
-
-            {/* Project Links */}
             <div className="space-y-4 rounded-xl border p-6">
               <h3 className="text-lg font-semibold">Live Links</h3>
               <div className="space-y-2">
@@ -86,7 +75,7 @@ export default function ProjectPage() {
           </div>
         </div>
       </div>
-      {/* Footer */}
+
       <div className="from-primary/5 relative mt-24 bg-gradient-to-br to-blue-500/0 pt-32 pb-12">
         <Footer />
       </div>
