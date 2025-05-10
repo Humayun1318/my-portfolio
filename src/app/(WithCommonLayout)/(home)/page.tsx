@@ -1,3 +1,4 @@
+"use client";
 import { AnimatedSection } from "@/components/animated-section";
 import { ContactForm } from "@/components/home/rightPart/contactForm/ContactForm";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
