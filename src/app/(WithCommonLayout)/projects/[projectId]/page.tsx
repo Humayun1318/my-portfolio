@@ -30,14 +30,6 @@ export default function ProjectPage() {
         if (descriptionTag && metadata.description) {
           descriptionTag.setAttribute("content", metadata.description);
         }
-
-        // // Update OpenGraph tags (for social sharing)
-        // if (metadata.openGraph?.images?.[0]) {
-        //   const ogImageTag = document.querySelector('meta[property="og:image"]');
-        //   if (ogImageTag) {
-        //     ogImageTag.setAttribute("content", metadata.openGraph.images[0]);
-        //   }
-        // }
       } catch (error) {
         console.error("Failed to update metadata:", error);
       }

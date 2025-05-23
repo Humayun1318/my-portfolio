@@ -11,6 +11,7 @@ const ContactDetails = () => {
         AOS.init({
           duration: 600,
           easing: "ease-in-out",
+          // once: true,
         });
       }
     };
@@ -28,8 +29,11 @@ const ContactDetails = () => {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Left Column - Primary Contact */}
-        <div data-aos="fade-right" className="rounded-xl p-3 md:p-6 dark:bg-gray-900">
-          <h3 className="mb-4 text-xl font-semibold text-gray-800 dark:text-white">
+        <div className="rounded-xl p-3 md:p-6 dark:bg-gray-900">
+          <h3
+            className="mb-4 text-xl font-semibold text-gray-800 dark:text-white"
+            data-aos="fade-down"
+          >
             Direct Contacts
           </h3>
 
@@ -44,7 +48,7 @@ const ContactDetails = () => {
                 </p>
                 <a
                   href="mailto:humayunkabir6267@gmail.com"
-                  className="text-base font-medium text-gray-800 transition-colors hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+                  className="text-base font-medium break-all text-gray-800 transition-colors hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
                 >
                   humayunkabir6267@gmail.com
                 </a>
@@ -105,8 +109,11 @@ const ContactDetails = () => {
         </div>
 
         {/* Right Column - Social Links */}
-        <div data-aos="fade-left" className="rounded-xl p-3 md:p-6 dark:bg-gray-900">
-          <h3 className="mb-4 text-xl font-semibold text-gray-800 dark:text-white">
+        <div className="rounded-xl p-3 md:p-6 dark:bg-gray-900">
+          <h3
+            className="mb-4 text-xl font-semibold text-gray-800 dark:text-white"
+            data-aos="fade-down"
+          >
             Social & Messaging
           </h3>
 

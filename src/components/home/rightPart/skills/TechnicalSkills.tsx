@@ -49,7 +49,7 @@ function SkillItem({ skill }: { skill: any }) {
                   height={24}
                   className="h-6 w-6 rounded-sm"
                 />
-                <span className="font-medium">{skill.name}</span>
+                <span className="font-medium break-all">{skill.name}</span>
               </div>
             </div>
             <div className="bg-muted relative h-2 w-full rounded-full">
