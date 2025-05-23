@@ -56,17 +56,24 @@ export default function ProjectPageClient({ project }: Props) {
                     Live Demo
                   </Link>
                 </Button>
+                {project.githubUrl && (
+                  <Button variant="outline" asChild className="w-full">
+                    <Link href={project.githubUrl} target="_blank">
+                      Client Code
+                    </Link>
+                  </Button>
+                )}
+                {project?.liveApi && (
+                  <Button variant="outline" asChild className="w-full">
+                    <Link href={project.liveApi} target="_blank">
+                      Live API
+                    </Link>
+                  </Button>
+                )}
                 {project.backendUrl && (
                   <Button variant="outline" asChild className="w-full">
                     <Link href={project.backendUrl} target="_blank">
                       Backend Server
-                    </Link>
-                  </Button>
-                )}
-                {project.githubUrl && (
-                  <Button variant="outline" asChild className="w-full">
-                    <Link href={project.githubUrl} target="_blank">
-                      View Code
                     </Link>
                   </Button>
                 )}

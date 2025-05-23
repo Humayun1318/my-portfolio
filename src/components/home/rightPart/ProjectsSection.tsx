@@ -27,47 +27,55 @@ export default function ProjectsSection() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projects.slice(0, 4).map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <Link href={`/projects/${project.id}`} className="group block h-full">
-                <div className="bg-card relative flex h-full flex-col overflow-hidden rounded-2xl shadow-sm transition-shadow duration-300 hover:shadow-lg">
-                  {/* Project Image */}
-                  <div className="relative aspect-video">
-                    <Image src={project.image} alt={project.title} fill className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  </div>
-
-                  {/* Project Content */}
-                  <div className="flex flex-1 flex-col justify-between p-6">
-                    <div>
-                      <h3 className="text-foreground group-hover:text-primary text-xl font-semibold transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground mt-2 text-sm">{project.description}</p>
+          {projects
+            .slice(-4)
+            .reverse()
+            .map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-100px" }}
+              >
+                <Link href={`/projects/${project.id}`} className="group block h-full">
+                  <div className="bg-card relative flex h-full flex-col overflow-hidden rounded-2xl shadow-sm transition-shadow duration-300 hover:shadow-lg">
+                    {/* Project Image */}
+                    <div className="relative aspect-video">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     </div>
 
-                    {/* Tags */}
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="bg-primary/10 text-primary rounded-full px-3 py-1 text-xs font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    {/* Project Content */}
+                    <div className="flex flex-1 flex-col justify-between p-6">
+                      <div>
+                        <h3 className="text-foreground group-hover:text-primary text-xl font-semibold transition-colors">
+                          {project.title}
+                        </h3>
+                        <p className="text-muted-foreground mt-2 text-sm">{project.description}</p>
+                      </div>
+
+                      {/* Tags */}
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="bg-primary/10 text-primary rounded-full px-3 py-1 text-xs font-medium"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+                </Link>
+              </motion.div>
+            ))}
         </div>
 
         {/* View All Button */}

@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "react-toastify";
+import { Button } from "@/components/ui/button";
 
 export function ContactForm() {
   const [error, setError] = useState<string>("");
@@ -43,7 +44,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-11/12 rounded-none bg-[#040d331c] p-4 md:rounded-2xl md:p-8 dark:bg-black">
+    <div className="mx-auto w-full max-w-11/12 rounded-none p-4 md:rounded-2xl md:p-8 dark:border-gray-700 dark:bg-gray-800">
       <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">Contact Me</h2>
       <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
         Please fill out the form below to get in touch with me.
@@ -72,13 +73,13 @@ export function ContactForm() {
           {error === "Mail" && <p className="text-sm text-red-500">Email is required</p>}
         </LabelInputContainer>
 
-        <button
+        <Button
           className="group/btn relative mt-8 block h-10 w-full cursor-pointer rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
         >
           Submit &rarr;
           <BottomGradient />
-        </button>
+        </Button>
 
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
       </form>

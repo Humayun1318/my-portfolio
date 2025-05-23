@@ -25,6 +25,7 @@ export interface IProject {
   slug: string;
   liveUrl: string;
   backendUrl?: string;
+  liveApi?: string;
   githubUrl?: string;
   features: string[];
   techStack: {

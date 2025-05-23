@@ -7,7 +7,7 @@ import { IProject } from "@/types";
 
 export default function ProjectCard({ project }: { project: IProject }) {
   return (
-    <div className="group bg-card relative flex h-full flex-col overflow-hidden rounded-2xl border shadow-sm transition-shadow hover:shadow-lg">
+    <div className="group bg-card relative flex h-full flex-col overflow-hidden rounded-2xl border shadow-sm transition-shadow hover:shadow-xl">
       <div className="relative aspect-video">
         <Image src={project.image} alt={project.title} fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

@@ -21,6 +21,7 @@ export default function Navbar({ className }: { className?: string }) {
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink onClick={() => handleNavItem("about")}>About</HoveredLink>
               <HoveredLink onClick={() => handleNavItem("experience")}>Experience</HoveredLink>
+              <HoveredLink onClick={() => handleNavItem("projects")}>Projects</HoveredLink>
               <HoveredLink onClick={() => handleNavItem("contact")}>Contact</HoveredLink>
             </div>
           </MenuItem>
@@ -28,7 +29,8 @@ export default function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} active={active} item="Selected Works">
             <div className="grid grid-cols-2 gap-10 p-4 text-sm">
               {projects
-                ?.slice(0, 4)
+                ?.slice(-4)
+                .reverse()
                 .map((p) => (
                   <ProductItem
                     key={p.id}

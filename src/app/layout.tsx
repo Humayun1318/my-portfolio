@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider/theme-provider";
 import { ToastContainer } from "react-toastify";
 import { Inter } from "next/font/google";
-
+import "aos/dist/aos.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",

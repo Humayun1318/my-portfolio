@@ -7,6 +7,7 @@ import Experience from "@/components/home/rightPart/Experience";
 import SkillsSection from "@/components/home/rightPart/SkillsSection";
 import ProjectsSection from "@/components/home/rightPart/ProjectsSection";
 import TechStackSection from "@/components/home/rightPart/HomePageFooter/TechStackSection";
+import ContactDetails from "@/components/contactDetails/ContactDetails";
 
 const HomePage = () => {
   return (
@@ -53,6 +54,8 @@ const HomePage = () => {
         <h2 className="mb-6 text-4xl font-bold">Talk With Me</h2>
         {/* Content */}
         <ContactForm></ContactForm>
+        <h2 className="mt-8 mb-6 text-4xl font-bold">Get in Touch</h2>
+        <ContactDetails></ContactDetails>
       </AnimatedSection>
       <TechStackSection></TechStackSection>
     </>
