@@ -89,11 +89,13 @@ export const ProductItem = ({
   description,
   href,
   src,
+  fullstack,
 }: {
   title: string;
   description: string;
   href: string;
   src: string;
+  fullstack: string | undefined;
 }) => {
   return (
     <a href={href} className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -105,7 +107,10 @@ export const ProductItem = ({
         className="w-full max-w-[140px] shrink-0 rounded-md shadow-2xl sm:w-auto"
       />
       <div>
-        <h4 className="mb-1 text-xl font-bold text-black dark:text-white">{title}</h4>
+        <h4 className="mb-1 text-xl font-bold text-black dark:text-white">
+          {title}
+          {`${fullstack ? " (Fullstack)" : ""}`}
+        </h4>
         <p className="max-w-[10rem] text-sm text-neutral-700 dark:text-neutral-300">
           {description}
         </p>

@@ -38,6 +38,7 @@ export default function Navbar({ className }: { className?: string }) {
                     href={p?.liveUrl}
                     src={p?.image}
                     description={p?.description}
+                    fullstack={p?.backendUrl}
                   />
                 ))}
             </div>
