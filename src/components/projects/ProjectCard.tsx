@@ -16,6 +16,7 @@ export default function ProjectCard({ project }: { project: IProject }) {
       <div className="flex flex-1 flex-col justify-between p-6">
         <h3 className="text-foreground group-hover:text-primary text-xl font-semibold transition-colors">
           {project.title}
+          {`${project?.backendUrl ? " (Fullstack)" : ""}`}
         </h3>
         <p className="text-muted-foreground mt-2 text-sm">{project.description}</p>
 

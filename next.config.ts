@@ -7,13 +7,26 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "**",
       },
-    ],
-    domains: [
-      "cdn.jsdelivr.net",
-      "raw.githubusercontent.com",
-      "daisyui.com",
-      "www.mongoosejs.net",
-      "images.unsplash.com",
+      {
+        protocol: "https",
+        hostname: "cdn.jsdelivr.net",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "daisyui.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.mongoosejs.net",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };

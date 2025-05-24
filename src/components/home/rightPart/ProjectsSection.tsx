@@ -56,6 +56,7 @@ export default function ProjectsSection() {
                       <div>
                         <h3 className="text-foreground group-hover:text-primary text-xl font-semibold transition-colors">
                           {project.title}
+                          {`${project?.backendUrl ? " (Fullstack)" : ""}`}
                         </h3>
                         <p className="text-muted-foreground mt-2 text-sm">{project.description}</p>
                       </div>
