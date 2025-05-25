@@ -30,7 +30,7 @@ const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
                     style={{ background: "transparent" }}
                   />
                   <h1 className="mt-4 text-lg font-bold"> I&apos;m Humayun Kabir</h1>
-                  <p className="text-md mt-2">Front End Engineer</p>
+                  <p className="text-md mt-2">Web Developer</p>
                   <p className="mt-2 text-center text-sm">
                     I build accessible, pixel-perfect digital experiences for the web.
                   </p>
