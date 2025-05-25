@@ -125,7 +125,7 @@ export function MobileNav() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Front End Engineer
+              Web Developer
             </motion.p>
           </motion.div>
 

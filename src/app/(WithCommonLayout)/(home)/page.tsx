@@ -21,10 +21,13 @@ const HomePage = () => {
           focused on full-stack development using React, Node.js, and MongoDB.
           <br />
           <br />
-          My academic background includes leading a DeepFake detection project with Vision
-          Transformers, demonstrating my problem-solving skills. I’ve developed platforms like
-          Jobs-Hunt (real-time job search) and Bike-Store (inventory management), showcasing my
-          expertise in both frontend and backend development.
+          My academic background includes leading a DeepFake detection project using Vision
+          Transformers as my BSc thesis, which sharpened my problem-solving and research skills. I
+          have also developed modern web platforms like Trendora, a second-hand marketplace
+          featuring real-time search and secure authentication built with Next.js, React, and
+          Tailwind CSS, and Papyrus, a comprehensive stationery e-commerce application with backend
+          management powered by Node.js, Express, and MongoDB. These projects demonstrate my
+          proficiency in full-stack development and modern web technologies.
           <br />
           <br />
           As Deputy Project Manager at FIO, I honed my leadership and strategic planning skills,
